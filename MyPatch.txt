@@ -1,0 +1,5 @@
+first create project in console.firebase.google.com and create a cloud messaging for app and then continue from this link:
+https://enappd.com/blog/firebase-push-notifications-in-react-native/81/
+
+for local notification that use in download progress set ongoing: true in javascript code and then change the RNPushNotificationHelper.java in android folder of module line 390 add this:
+notification.setOnlyAlertOnce(true);
