@@ -387,7 +387,10 @@ public class RNPushNotificationHelper {
 
             if (bundle.containsKey("ongoing") || bundle.getBoolean("ongoing")) {
                 notification.setOngoing(bundle.getBoolean("ongoing"));
-                notification.setOnlyAlertOnce(true);
+            }
+            
+            if (bundle.containsKey("alertonce") || bundle.getBoolean("alertonce")) {
+                notification.setOnlyAlertOnce(bundle.getBoolean("alertonce"));
             }
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
